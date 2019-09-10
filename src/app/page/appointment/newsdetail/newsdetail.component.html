@@ -1,0 +1,89 @@
+<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+<div class="card shadow ">
+  <!---->
+  <div class="card-header" style=" background:  linear-gradient(to right, rgb(109, 134, 124), #52685f); ">
+    <b class="font-h" style="color: #fff">Add News </b>
+    <!---->
+  </div>
+  <form [formGroup]="formGroup">
+    <div class="card-body">
+
+      <div class="row">
+        <div class="col-8">
+            <div class=" mt-3 row">
+
+                <div class="col col-sm-9">
+                  <div class=" row"></div>
+                  <div class="row  mt-2">
+                    <div class="col col-sm-3 text-right"><label class="label-middle">หัวข้อ : </label></div>
+                    <div class="col col-sm-9"><input class="form-control" type="text" width="auto" formControlName="title">
+                    </div>
+                  </div>
+        
+                  <div class="row  mt-2">
+                    <div class="col col-sm-3 text-right"><label class="label-middle">Description : </label></div>
+                    <div class="col col-sm-9"><input class="form-control" type="text" width="auto"
+                        formControlName="description"></div>
+                  </div>
+        
+                  <div class=" row mt-2">
+                    <div class="col col-sm-3  text-right"><label class="label-middle">StartDate : </label></div>
+                    <div class="col col-sm-9">
+                      <input-calendar (changeDate)="setDate('startdate', $event)"></input-calendar>
+                    </div>
+                  </div>
+                  <div class=" row mt-2">
+                    <div class="col col-sm-3  text-right"><label class="label-middle">EndDate : </label></div>
+                    <div class="col col-sm-9">
+                      <input-calendar (changeDate)="setDate('enddate', $event)"></input-calendar>
+                    </div>
+                  </div>
+                  <div class="row  mt-2 ">
+                      <div class="col col-sm-3 text-right"><label class="label-middle">รูปภาพ : </label></div>
+                      <div class="col col-sm-9">
+                          <div class="custom-file" id="customFile" lang="es">
+                              <input  type="file" class="custom-file-input" aria-describedby="fileHelp">
+                              <label class="custom-file-label" for="exampleInputFile">
+                                 Select Image...
+                              </label>
+                      </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+        <!-- <div class="col-4">
+            <div class="form-group text-center">
+                <img class="img-fluid img-thumbnail" [src]="imgURL" height="auto" width="auto" *ngIf="imgURL&&!isInital">           
+                <img class="img-fluid img-thumbnail" [src]="pathImage" *ngIf="isInital" height="auto" width="auto">
+              </div>
+            <input style="display: none" (change)="preview(file.files)" #fileInput #file type="file" accept='image/*'>
+            <button class="btn btn-primary btn-sm" btnType="submit" (click)="fileInput.click()" color="primary">เลือกรูปภาพ</button>
+        </div> -->
+      </div>
+
+    
+
+      <div class="form-group row mt-3">
+        <div class="col col-sm-12 text-center">
+          <button-save (click)="onOpenModalSave()" tabindex="0">
+          </button-save>
+          <button-cancel routerLink="/appointment/appointment" _nghost-c8="" tabindex="0">
+            <button
+              class="btn btn-danger btn-md" type="button"><i aria-hidden="true" class="fa fa-times"></i>
+              Cancel</button></button-cancel>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<modal-confirm #saveModal (onConfirm)="onClickSave()">
+  </modal-confirm>
+  <!-- successModal -->
+  <modal-success #successModal>
+  </modal-success>
+  <!-- errorModal -->
+  <modal-error #errorModal>
+  </modal-error>

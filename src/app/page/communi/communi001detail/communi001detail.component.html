@@ -1,0 +1,127 @@
+<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+<app-card header="ทสภ." isButton="false">
+  <div class="row ">
+    <div class="col-md-6 text-left">
+      <button-back routerLink="/communi/communi001"></button-back>
+    </div>
+    <div class="col-md-6 text-right">
+      <button-save routerLink="/communi/communi001"></button-save>
+      <button-cancel routerLink="/communi/communi001"></button-cancel>
+    </div>
+  </div>
+  <hr>
+  <div class="row mt-2">
+    <div class="col-2 text-right ">
+      <p>รหัสผู้ประกอบการ :<span class="text-danger">*</span> </p>
+    </div>
+    <div class="col-4">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control form-control-sm" placeholder="ค้นหารหัสผู้ประกอบการ" aria-label="รหัสผู้ประกอบการ"
+          aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-info" type="button" id="button-addon2"><i class="fa fa-search"
+              aria-hidden="true"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 text-right ">
+      <p>ชื่อผู้ประกอบการ : <span class="text-danger">*</span> </p>
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control form-control-sm" placeholder="กรุณากรอกชื่อผู้ประกอบการ">
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-2 text-right ">
+      <p>เลขที่สัญญา : </p>
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control form-control-sm" placeholder="เลขที่สัญญา">
+    </div>
+
+  </div>
+  <div class="row mt-2">
+    <div class="col-2 text-right ">
+      <p>จำนวนวิทยุมือถือ : <span class="text-danger">*</span> </p>
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control form-control-sm" value="3">
+    </div>
+    <div class="col-1 ">
+      <p> เครื่อง </p>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-2 text-right ">
+      <p>รหัสเครื่องที่ 1 : </p>
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control form-control-sm" placeholder="" value="A12345">
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-2 text-right ">
+      <p>รหัสเครื่องที่ 2 : </p>
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control form-control-sm" placeholder=""value="B12345" >
+    </div>
+
+
+  </div>
+  <div class="row mt-2">
+    <div class="col-2 text-right ">
+      <p>รหัสเครื่องที่ 3 : </p>
+    </div>
+    <div class="col-4">
+      <input type="text" class="form-control form-control-sm" placeholder="" value="C12345">
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-2 text-right ">
+      <p>ค่าเช่าวิทยุมือถือ : </p>
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control form-control-sm" value="7200.00">
+    </div>
+    <div class="col-1 ">
+      <p> บาท </p>
+    </div>
+    <div class="col-2 text-right ">
+      <p>เงินประกันค่าเช่าวิทยุมือถือ : </p>
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control form-control-sm" value="60000.00">
+    </div>
+    <div class="col-1 ">
+      <p> บาท </p>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-2 text-right ">
+      <p>รวมอัตราค่าภาระ : </p>
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control form-control-sm" value="67200.00">
+    </div>
+    <div class="col-1 ">
+      <p> บาท </p>
+    </div>
+    <div class="col-2 text-right ">
+      <p>วันที่ขอใช้บริการ : </p>
+    </div>
+    <div class="col-4">
+        <input-calendar></input-calendar>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-2 text-right ">
+      <p>หมายเหตุ : </p>
+    </div>
+
+    <div class="col-10">
+      <textarea class="form-control form-control-sm" >คืนเงินประกันเมื่อผู้ใช้แจ้งยกเลิกโดยไม่มีหนี้สินค้างชำระ</textarea>
+    </div>
+  </div>
+</app-card>

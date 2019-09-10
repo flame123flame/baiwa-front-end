@@ -1,0 +1,163 @@
+.colorNav {
+  /* background:  linear-gradient(to right, rgb(168, 212, 102), #78B720); */
+  background-color: #99CB50 !important;
+  margin-bottom: 17px;
+}
+
+h4.logo {
+  color: #4686d8;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+}
+
+.list-unstyled a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul.list-main>li>a>i {
+  color: #fff;
+  padding-right: 30px;
+  font-size: 20px;
+  width: 15px;
+  text-align: left;
+}
+
+ul.list-main>li {
+  border-bottom: #8B9297 1px solid;
+}
+
+.list-unstyled>li.header {
+  /* color: #1957db; */
+  background: #7B7D83;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+/* #sidebar {
+  min-width: 350px;
+  max-width: 350px;
+  min-height: 100vh;
+} */
+a[data-toggle="collapse"],
+.table {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+/* a.dropdown-toggle{
+  font-size: 16px !important;
+} */
+
+ul.components>li>ul>li>a {
+  font-size: 14px !important;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
+  }
+}
+
+
+#sidebar {
+  /* don't forget to add all the previously mentioned styles here too */
+  /* background: #44525F; */
+  background:  linear-gradient(to top, rgb(84, 114, 103), #44525F); 
+  color: #4686d8;
+  transition: all 0.3s;
+  /* font-size: 18px; */
+}
+
+#sidebar .sidebar-header {
+  padding: 7.5px;
+  background: rgb(255, 255, 255);
+  color: #ffffff;
+  /* border-bottom: 3px solid #4686d8; */
+}
+
+/* #sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #143d3a;
+} */
+
+#sidebar ul.list-main p {
+  color: rgb(37, 110, 245);
+  padding: 10px;
+}
+
+#sidebar ul.list-main li a {
+  padding: 10px;
+  font-size: 14px;
+  display: block;
+}
+
+#sidebar ul.list-main li a:hover {
+  color: #4686d8;
+  /* background: rgb(224, 141, 47); */
+}
+
+#sidebar ul.list-main li.active>a,
+a[aria-expanded="true"] {
+  color: #4686d8;
+  /* background: rgb(224, 141, 47); */
+}
+
+ul.list-main ul a {
+  font-size: 14px !important;
+  padding-left: 30px !important;
+  background: #7B7D83;
+}
+
+a.user {
+  color: #ffffff;
+}
+
+a.user:hover,
+a.user:active {
+  color: #7B7D83;
+}
+
+.notification {
+  position: absolute;
+  background-color: #408FBF;
+  text-align: center;
+  border-radius: 10px;
+  min-width: 17px;
+  height: 17px;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 300;
+  line-height: 17px;
+  top: -6px;
+  right: -5px;
+  letter-spacing: -1px;
+}

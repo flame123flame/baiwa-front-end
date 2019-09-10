@@ -1,0 +1,58 @@
+<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+
+<div class="row">
+  <div class="col text-right">
+    <button type="button" style="background-color: #A5D261" class="btn " routerLink="/appointment/newsdetail"><i
+        class="fa fa-plus" aria-hidden="true"></i> Add News</button>
+  </div>
+</div>
+<div class="row p-1">
+
+  <div class="card col-sm-5 col-md-5 p-1 m-2" *ngFor="let item of newsList;" >
+    <div class="card-header" style="background-color: #f1f1f1">
+      <div class="row">
+
+        <div class="col-10 ">
+          <h6 class="card-title">{{item.title}}</h6>
+        </div>
+        <div class="col-2 text-right">
+          <button   (click)="onClickEdit(item.newsId)"  class="btn btn-sm btn-info" >
+            <i class="fa fa-edit" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body" style="background-color:   #fff">
+      <div class="row">
+        <div class="col">
+          <img src="./assets//img/TPAC.jpg" alt="..." class="img-thumbnail">
+        </div>
+        <div class="col">
+
+          <div class="row">
+            <div class="col-5 text-right">เริ่ม :</div>
+            <div class="col-7">
+              <p>{{item.startDate}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5 text-right">สิ้นสุด :</div>
+            <div class="col-7">
+              <p>{{item.endDate}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5 text-right">Desciption:</div>
+            <div class="col-7">
+              <p>{{item.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

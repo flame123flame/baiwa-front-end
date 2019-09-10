@@ -1,0 +1,71 @@
+<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+<div class="container-fluid text-right ">
+  <button type="button" class="btn btn-primary" routerLink="/information/inf001detail"><i class="fa fa-plus" aria-hidden="true"></i> AddNews</button>
+</div>
+
+<table class="table mt-2">
+  <thead style=" background:  linear-gradient(to right, rgb(109, 134, 124), #52685f); ">
+    <tr>
+      <th scope="col" style="color: #fff">รูป</th>
+      <th scope="col" style="color: #fff">หัวเรื่อง</th>
+      <th scope="col" style="color: #fff">เริ่ม</th>
+      <th scope="col" style="color: #fff">สิ้นสุด</th>
+      <th scope="col" style="color: #fff">สถานะ</th>
+      <th scope="col" style="color: #fff">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img style="height: 80px;width: 115px;" [src]="imagePath" class="rounded"
+          alt="Cinque Terre"></td>
+      <td>ออกตรวจระบบงาน</td>
+      <td>2019-02-04</td>
+      <td>2019-02-15</td>
+      <td>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>Active</option>
+          <option>Inactive</option>
+        </select>
+      </td>
+      <td>
+        <button-icon color="info"><i class="fa fa-edit" aria-hidden="true"></i></button-icon>
+        <button-icon color="danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button-icon>
+      </td>
+    </tr>
+
+    <tr>
+      <td><img style="height: 80px;width: 115px;" [src]="imagePath"class="rounded"
+          alt="Cinque Terre"></td>
+      <td>ออกตรวจระบบงาน</td>
+      <td>2019-02-04</td>
+      <td>2019-02-15</td>
+      <td>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>Active</option>
+          <option>Inactive</option>
+        </select>
+      </td>
+      <td>
+        <button-icon color="info"><i class="fa fa-edit" aria-hidden="true"></i></button-icon>
+        <button-icon color="danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button-icon>
+      </td>
+    </tr>
+    <tr>
+      <td><img style="height: 80px;width: 115px;" [src]="imagePath" class="rounded"
+          alt="Cinque Terre"></td>
+      <td>ออกตรวจระบบงาน</td>
+      <td>2019-02-04</td>
+      <td>2019-02-15</td>
+      <td>
+        <select class="form-control" id="exampleFormControlSelecnt1">
+          <option>Active</option>
+          <option>Inactive</option>
+        </select>
+      </td>
+      <td>
+        <button-icon color="info"><i class="fa fa-edit" aria-hidden="true"></i></button-icon>
+        <button-icon color="danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button-icon>
+      </td>
+    </tr>
+  </tbody>
+</table>

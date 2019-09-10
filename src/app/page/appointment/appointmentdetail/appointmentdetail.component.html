@@ -1,0 +1,109 @@
+<div class="form-group">
+
+  <div class="card shadow ">
+    <!---->
+    <div class="card-header" style=" background:  linear-gradient(to right, rgb(109, 134, 124), #52685f); ">
+      <b class="font-h" style="color: #fff">Create Appointment</b>
+      <!---->
+    </div>
+    <form [formGroup]="formGroup">
+      <div class="card-body">
+
+        <div class="form-group mt-3 row">
+
+          <div class="col col-sm-9">
+            <div class=" row"></div>
+            <div class="row  mt-2">
+              <div class="col col-sm-3 text-right"><label class="label-middle">Name : </label></div>
+              <div class="col col-sm-9"><input class="form-control" type="text" width="auto" formControlName="title">
+              </div>
+            </div>
+
+            <div class="row  mt-2">
+              <div class="col col-sm-3 text-right"><label class="label-middle">Description : </label></div>
+              <div class="col col-sm-9"><input class="form-control" type="text" width="auto"
+                  formControlName="description"></div>
+            </div>
+            <!-- <div class="row  mt-2">
+              <div class="col col-sm-3 text-right"><label class="label-middle">Appointment : </label></div>
+              <div class="col col-sm-9"> <input class="form-control" type="text" width="auto"
+                  formControlName="appointment"></div>
+            </div> -->
+            <div class=" row  mt-2">
+              <div class="col col-sm-3 text-right"><label class="label-middle">Status : </label></div>
+              <div class="col col-sm-9"> <input class="form-control" type="text" width="auto" formControlName="status">
+              </div>
+            </div>
+            <div class=" row  mt-2">
+              <div class="col col-sm-3 text-right"><label class="label-middle">Start Time : </label></div>
+              <div class="col col-sm-9"> <input class="form-control" type="text" width="auto"
+                  formControlName="timeStart"></div>
+            </div>
+            <div class=" row  mt-2">
+              <div class="col col-sm-3 text-right"><label class="label-middle">Emd Time : </label></div>
+              <div class="col col-sm-9"> <input class="form-control" type="text" width="auto" formControlName="timeEnd">
+              </div>
+            </div>
+            <div class=" row mt-2">
+              <div class="col col-sm-3  text-right"><label class="label-middle">Date : </label></div>
+              <div class="col col-sm-9">
+                <input-calendar (changeDate)="setDate('date', $event)"></input-calendar>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class=" row ml-5 mr-5 mt-2">
+          
+            <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th class="text-center" scope="col">#</th>
+                    <th scope="col">User</th>
+                    <th scope="col">UserName</th>                  
+                    <th scope="col">UserName</th>                  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of userList;let i=index">
+                    <th class="text-center"> 
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customControlInline{{i}}"
+                              (change)="checkboxUser(item,$event)">
+                            <label class="custom-control-label" for="customControlInline{{i}}"></label>
+                          </div>
+                    </th>
+                    <td>{{item.name}}</td>
+                    <td>{{item.surname}}</td>                  
+                    <td>{{item.userName}}</td>                  
+                  </tr>
+                
+                </tbody>
+              </table>
+        </div>
+        <div class="form-group row">
+          <div class="col col-sm-12 text-center">
+            <button-save  (click)="onOpenModalSave()" tabindex="0">
+          </button-save>
+            <button-cancel routerLink="/appointment/appointment" _nghost-c8="" tabindex="0"><button
+                class="btn btn-danger btn-md" type="button"><i aria-hidden="true" class="fa fa-times"></i>
+                Cancel</button></button-cancel>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+  </div>
+
+</div>
+
+
+<modal-confirm #saveModal (onConfirm)="onClickSave()">
+  </modal-confirm>
+  <!-- successModal -->
+  <modal-success #successModal>
+  </modal-success>
+  <!-- errorModal -->
+  <modal-error #errorModal>
+  </modal-error>

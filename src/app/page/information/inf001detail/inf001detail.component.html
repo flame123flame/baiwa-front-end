@@ -1,0 +1,58 @@
+<div class="form-group">
+
+    <div class="card shadow ">
+      <!---->
+      <div class="card-header" style=" background:  linear-gradient(to right, rgb(109, 134, 124), #52685f); ">
+        <b class="font-h" style="color: #fff">สร้างข้อมูลข่าว</b>
+        <!---->
+      </div>
+      <div class="card-body">
+        <div class="form-group mt-3 row">
+          <div class="col col-sm-3">
+            <div class="form-group"><img style="height: 145px;width: 160px;" src="./../../../../assets//img//TPAC.jpg" class="rounded"
+              alt="Cinque Terre"></div>
+            <div class="form-group row">
+
+                  <button type="button" class="btn btn-primary" > Browser</button>
+            </div>
+          </div>
+          <div class="col col-sm-9">
+            <div class="form-group row"></div>
+            <div class="form-group row">
+              <div class="col col-sm-3 text-right"><label class="label-middle">หัวข้อ
+                  : (ภาษาไทย) : </label></div>
+              <div class="col col-sm-9"><input class="form-control" placeholder="หัวข้อ : (ภาษาไทย)" type="text"
+                  width="auto"></div>
+            </div>
+            <div class="form-group row">
+              <div class="col col-sm-3 text-right"><label class="label-middle">คำอธิบาย : (ภาษาไทย) : </label></div>
+              <div class="col col-sm-9"><textarea class="form-control" id="exampleFormControlTextarea4"
+                  rows="3"></textarea></div>
+            </div>
+
+            <div class="form-group row">
+              <div class="col col-sm-3 text-right"><label class="label-middle">StartDate : </label></div>
+              <div class="col col-sm-9">  <input-calendar></input-calendar></div>
+            </div>
+            <div class="form-group row">
+              <div class="col col-sm-3  text-right"><label class="label-middle">EndDate : </label></div>
+              <div class="col col-sm-9">  <input-calendar></input-calendar></div>
+            </div>
+    
+          </div>
+        </div>
+        <div class="form-group row"></div>
+        <div class="form-group row">
+          <div class="col col-sm-12 text-center">
+            <button-save  rrouterLink="/information/inf001" tabindex="0">
+              <button   routerLink="/information/inf001"   class="btn btn-success btn-md" ><i   
+                  aria-hidden="true" class="fa fa-save"></i> Save</button></button-save>
+            <button-cancel routerLink="/information/inf001" _nghost-c8="" tabindex="0"><button  
+                class="btn btn-danger btn-md" type="button"><i   aria-hidden="true"
+                  class="fa fa-times"></i> Cancel</button></button-cancel>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>

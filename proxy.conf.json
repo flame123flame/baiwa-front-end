@@ -1,0 +1,12 @@
+{  
+    "/api/*": {  
+      "target": "http://baiwadev.thddns.net:9440/BaiwaB",
+       "secure": false,  
+       "changeOrigin": true
+    },
+    "/token/*": {  
+      "target": "http://baiwadev.thddns.net:9440/BaiwaB",
+       "secure": false,  
+       "changeOrigin": true
+    }
+} 

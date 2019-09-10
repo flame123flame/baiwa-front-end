@@ -1,0 +1,75 @@
+<app-breadcrumb [breadcrumb]="breadcrumb"></app-breadcrumb>
+
+<div class="alert alert-dark" role="alert">
+ <div class="row">
+    <div class="col-2 text-right">Status :</div>
+   <div class="col-4">
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>UnConfirmed</option>
+      <option>Confirmed</option>
+      <option>Cencelled</option>
+      <option>ComPleted</option>
+    
+    </select>
+   </div>
+   <div class="col-6 text-right">
+      <button type="button" style="background-color: #A5D261" class="btn" routerLink="/appointment/appointmentdetail">
+        <i class="fa fa-plus"
+    aria-hidden="true"></i> Create</button>
+  </div>
+ </div>
+</div>
+<div class="row p-1">
+
+    <div class="card col-sm-5 col-md-5  p-1 m-4"   *ngFor="let item of appointmentList;">
+      <div class="card-header" style="background-color: #f1f1f1">
+        <div class="row">
+          <div class="col-9">
+            <h6 class="card-title">{{item.title}}</h6>
+          </div>
+          <div class="col-2 text-right"  style="    margin-left: 30px !important;">
+              <button  (click)="onClickEdit(item.appointmentId)" class="btn btn-sm " style="background-color: #78AAC5" >
+                  <i class="fa fa-edit" aria-hidden="true"></i>
+                </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body" style="background-color:    #fff">
+        <div class="row">
+          <div class="col-5 text-right">Create By :</div>
+          <div class="col-7">
+            <p>สมชาย ใจดี</p>
+          </div>
+        </div>    
+        <div class="row">
+            <div class="col-5 text-right">
+              <p>วัน เวลา {{item.date}}</p>
+            </div>
+          <div class="col-7">
+            <p> {{item.timeStart}} - {{item.timeEnd}}</p>
+          </div>
+        </div>   
+        <div class="row">
+          <div class="col-5 text-right">Description :</div>
+          <div class="col-7">
+            <p>{{item.description}}</p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-right">
+                <img  [src]="imagePath1" alt="Avatar" class="avatar">
+                <img [src]="imagePath2" alt="Avatar" class="avatar">
+                <img [src]="imagePath3" alt="Avatar" class="avatar">
+                <img [src]="imagePath4" alt="Avatar" class="avatar">            
+                <img [src]="imagePath6" alt="Avatar" class="avatar">
+            </div>
+         
+          </div>
+           
+
+     
+      </div>
+    </div>
+
+
+</div>
